@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Drawing tools</title>
+     <link rel="stylesheet" href="src/index.css">
+    <script src="src/index.js" defer></script>
+  </head>
+  <body>
+    <div id="ribbon" style="background-color: whitesmoke;border: 12px solid whitesmoke;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        <span style="font-weight: bold;font-size:16px;">FREE DRAW</span>
+        &nbsp;
+        <span class="menu-item">
+            <label for="a">Stroke:<span id="rangeValue">10</span></label>
+            <input type="range" id="a" name="a" value="10" min="1" max="20" style="accent-color: #000000;width:100px !important">            
+        </span>
+        <span class="menu-item">
+            
+            <label>Pen Color</label>
+            <input type="color" id="favcolor" name="favcolor" value="#000000">
+            <input type="range" style="accent-color: #000000;" id="alpha" name="alpha" min="0" max="1" step="0.01" value="1">
+        </span>
+           
+        <span class="menu-item">
+            <label for="showgrid">Show Grid</label>
+            <input type="checkbox" id="showgrid"  value="1">
+        </span>
+        <span class="menu-item">
+            <label for="linemode">Line Mode</label>
+            <input type="checkbox" id="linemode"  value="1">
+
+            <!--
+
+
+            <label class="custom-radio white">
+                <input type="radio" name="color" value="white">
+                <span></span>
+            </label>
+            
+            <label class="custom-radio red">
+                <input type="radio" name="color" value="red">
+                <span></span>
+            </label>
+
+            <label class="custom-radio orange">
+                <input type="radio" name="color" value="orange">
+                <span></span>
+            </label>
+
+            <label class="custom-radio green">
+                <input type="radio" name="color" value="green">
+                <span></span>
+            </label>
+            <label class="custom-radio blue">
+                <input type="radio" name="color" value="blue">
+                <span></span>
+            </label>
+        -->
+        </span>
+    </div>
+      <canvas id="canvas" ></canvas>
+      <script>
+        const rangeInput = document.getElementById('a');
+        const rangeValue = document.getElementById('rangeValue');
+      
+        // Update the label when the range value changes
+        rangeInput.addEventListener('input', () => {
+          rangeValue.textContent = rangeInput.value;
+        });
+      </script>
+  </body>
+</html>
