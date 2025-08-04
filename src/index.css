@@ -4,7 +4,6 @@ body {
   canvas {
     border: 2px solid black;
     background-color: aliceblue;
-    height: 5000px;
   }
   
   .custom-radio {
@@ -79,4 +78,5 @@ body {
   .menu-item:hover {
     background-color: rgb(226, 224, 224);
     border: 10px solid rgb(221, 221, 221);
+
   }
