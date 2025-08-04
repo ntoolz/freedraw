@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+  }
+  canvas {
+    border: 2px solid black;
+    background-color: aliceblue;
+    height: 5000px;
+  }
+  
+  .custom-radio {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .custom-radio input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .custom-radio span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid gray;
+    border-radius: 50%;
+    background-color: white;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+
+
+    /* Red */
+    .custom-radio.white span {
+        border-color: white;
+      }
+      .custom-radio.red input:checked + span {
+        background-color: white;
+      }
+
+  /* Red */
+  .custom-radio.red span {
+    border-color: red;
+  }
+  .custom-radio.red input:checked + span {
+    background-color: red;
+  }
+
+    /* Red */
+    .custom-radio.orange span {
+    border-color: orange;
+    }
+    .custom-radio.orange input:checked + span {
+    background-color: orange;
+    }
+
+  /* Green */
+  .custom-radio.green span {
+    border-color: green;
+  }
+  .custom-radio.green input:checked + span {
+    background-color: green;
+  }
+
+  /* Blue */
+  .custom-radio.blue span {
+    border-color: blue;
+  }
+  .custom-radio.blue input:checked + span {
+    background-color: blue;
+  }
+
+  .menu-item:hover {
+    background-color: rgb(226, 224, 224);
+    border: 10px solid rgb(221, 221, 221);
+  }
